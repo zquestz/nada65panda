@@ -1,0 +1,257 @@
+{
+  "name": "Nada 65 Panda",
+  "vendorId": "0x1480",
+  "productId": "0x6351",
+  "keycodes": ["qmk_lighting"],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+              "options": [
+                ["None", 0],
+                ["SOLID_COLOR", 1],
+                ["GRADIENT_UP_DOWN", 2],
+                ["GRADIENT_LEFT_RIGHT", 3],
+                ["BREATHING", 4],
+                ["BAND_SAT", 5],
+                ["BAND_VAL", 6],
+                ["BAND_PINWHEEL_SAT", 7],
+                ["BAND_PINWHEEL_VAL", 8],
+                ["BAND_SPIRAL_SAT", 9],
+                ["BAND_SPIRAL_VAL", 10],
+                ["CYCLE_ALL", 11],
+                ["CYCLE_LEFT_RIGHT", 12],
+                ["CYCLE_UP_DOWN", 13],
+                ["RAINBOW_MOVING_CHEVRON", 14],
+                ["CYCLE_OUT_IN", 15],
+                ["CYCLE_OUT_IN_DUAL", 16],
+                ["CYCLE_PINWHEEL", 17],
+                ["CYCLE_SPIRAL", 18],
+                ["RAINBOW_BEACON", 20],
+                ["DUAL_BEACON", 21],
+                ["RAINBOW_PINWHEELS", 21],
+                ["HUE_BREATHING", 22],
+                ["HUE_PENDULUM", 23],
+                ["HUE_WAVE", 24],
+                ["TYPING_HEATMAP", 25],
+                ["SOLID_REACTIVE_SIMPLE", 26],
+                ["SOLID_REACTIVE", 27],
+                ["SOLID_REACTIVE_WIDE", 28],
+                ["SOLID_REACTIVE_MULTIWIDE", 29],
+                ["SOLID_REACTIVE_CROSS", 30],
+                ["SOLID_REACTIVE_MULTICROSS", 31],
+                ["SOLID_REACTIVE_NEXUS", 32],
+                ["SOLID_REACTIVE_MULTINEXUS", 33],
+                ["SPLASH", 34],
+                ["MULTISPLASH", 35],
+                ["SOLID_SPLASH", 36],
+                ["SOLID_MULTISPLASH", 371]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 1",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "customKeycodes": [
+    {
+      "name": "Bluetooth Host 1",
+      "title": "Bluetooth Host 1",
+      "shortName": "BT1"
+    },
+    {
+      "name": "Bluetooth Host 2",
+      "title": "Bluetooth Host 2",
+      "shortName": "BT2"
+    },
+    {
+      "name": "Bluetooth Host 3",
+      "title": "Bluetooth Host 3",
+      "shortName": "BT3"
+    },
+    { "name": "2.4G Host", "title": "2.4G Host", "shortName": "2.4G" }
+  ],
+  "matrix": { "rows": 5, "cols": 15 },
+  "layouts": {
+    "keymap": [
+      [
+        {
+          "c": "#777777"
+        },
+        "0,0\nESC",
+        {
+          "c": "#cccccc"
+        },
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5",
+        "0,6",
+        "0,7",
+        "0,8",
+        "0,9",
+        "0,10",
+        "0,11",
+        "0,12",
+        {
+          "w": 2.25,
+          "c": "#aaaaaa"
+        },
+        "0,13",
+        "0,14"
+      ],
+      [
+        {
+          "w": 1.5,
+          "c": "#aaaaaa"
+        },
+        "1,0",
+        {
+          "c": "#cccccc"
+        },
+        "1,1",
+        "1,2",
+        "1,3",
+        "1,4",
+        "1,5",
+        "1,6",
+        "1,7",
+        "1,8",
+        "1,9",
+        "1,10",
+        "1,11",
+        "1,12",
+        {
+          "c": "#aaaaaa",
+          "w": 1.75
+        },
+        "1,13",
+        "1,14"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.75
+        },
+        "2,0",
+        {
+          "c": "#cccccc"
+        },
+        "2,1",
+        "2,2",
+        "2,3",
+        "2,4",
+        "2,5",
+        "2,6",
+        "2,7",
+        "2,8",
+        "2,9",
+        "2,10",
+        "2,11",
+        {
+          "c": "#777777",
+          "w": 2.5
+        },
+        "2,13",
+        {
+          "c": "#aaaaaa"
+        },
+        "2,14"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 2.25
+        },
+        "3,0",
+        {
+          "c": "#cccccc"
+        },
+        "3,1",
+        "3,2",
+        "3,3",
+        "3,4",
+        "3,5",
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "3,10",
+        {
+          "w": 2
+        },
+        "3,12",
+        {
+          "c": "#777777"
+        },
+        "3,13",
+        {
+          "c": "#aaaaaa"
+        },
+        "3,14"
+      ],
+      [
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "4,0",
+        {
+          "w": 1.25
+        },
+        "4,1",
+        {
+          "w": 1.25
+        },
+        "4,2",
+        {
+          "c": "#cccccc",
+          "w": 7
+        },
+        "4,6",
+        {
+          "c": "#aaaaaa",
+          "w": 1.25
+        },
+        "4,9",
+        {
+          "w": 1.25
+        },
+        "4,10",
+        {
+          "c": "#777777"
+        },
+        "4,12",
+        "4,13",
+        "4,14"
+      ]
+    ]
+  }
+}
